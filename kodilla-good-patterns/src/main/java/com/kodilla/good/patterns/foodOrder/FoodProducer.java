@@ -22,4 +22,9 @@ public class FoodProducer {
     public int getCompanyId() {
         return companyId;
     }
+
+    public boolean process() {
+        System.out.println("Order confirmed for distributor: " + getCompanyName());
+        return true;
+    }
 }
