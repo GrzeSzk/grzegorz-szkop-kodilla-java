@@ -1,6 +1,6 @@
 package com.kodilla.good.patterns.foodOrder;
 
-public class FoodProducer {
+public abstract class FoodProducer {
     private String companyName;
     private String foodType;
     private int companyId;
@@ -23,8 +23,8 @@ public class FoodProducer {
         return companyId;
     }
 
-    public boolean process() {
-        System.out.println("Order confirmed for distributor: " + getCompanyName());
+    public boolean process(FoodOrderRequest foodOrderRequest) {
+        System.out.println("Order confirmed for distributor: " + getCompanyName() + getCompanyId());
         return true;
     }
 }

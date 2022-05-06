@@ -7,6 +7,6 @@ public class FoodOrderApplication {
         FoodOrderRequest foodOrderRequest = foodOrderRequestRetriever.retrieve();
 
         FoodOrderService foodOrderService = new FoodOrderService();
-        FoodOrderService.OrderCreate(foodOrderRequest);
+        foodOrderService.orderCreate(foodOrderRequest);
     }
 }

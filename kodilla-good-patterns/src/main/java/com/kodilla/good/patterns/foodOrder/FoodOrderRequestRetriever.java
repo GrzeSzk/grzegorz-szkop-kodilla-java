@@ -4,10 +4,9 @@ public class FoodOrderRequestRetriever {
 
     public FoodOrderRequest retrieve() {
 
-        FoodProducer foodProducer = new FoodProducer("VegeShop", "Plant based", 376872);
         int foodQuantity = 32;
-        String foodType = "vegetables";
+        String foodType = "Gluten free food";
 
-        return new FoodOrderRequest(foodProducer, foodQuantity, foodType);
+        return new FoodOrderRequest(foodQuantity, foodType);
     }
 }
