@@ -15,6 +15,7 @@ public class BoardConfig {
 
     @Bean
     public Board getBoard() {
+
         return new Board(toDoList(), inProgressList(), doneList());
     }
 
@@ -33,6 +34,7 @@ public class BoardConfig {
     @Bean(name="doneList")
     @Scope("prototype")
     public TaskList doneList() {
+
         return new TaskList();
     }
 }

@@ -16,7 +16,7 @@ public class BoardTestSuite {
 
         //When
         board.getToDoList().addTask("Task to do no 1");
-        board.getInProgressList().addTask("Task in progres no 1");
+        board.getInProgressList().addTask("Task in progress no 1");
         board.getDoneList().addTask("Done task no 1");
 
         //Then
@@ -24,8 +24,6 @@ public class BoardTestSuite {
                 board.getToDoList().getTasks().get(0) + ", " +
                 board.getInProgressList().getTasks().get(0) + ", " +
                 board.getDoneList().getTasks().get(0) + ".");
-        //potrzebuję pomocy jak wypisac zadania ze wszystkich list jednocześnie, da się jakimś forEach??
-
 
     }
 }
