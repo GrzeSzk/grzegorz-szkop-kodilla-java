@@ -5,6 +5,7 @@ public final class DrivingTask implements Task {
     private final String taskName;
     private final String where;
     private final String using;
+    private boolean taskExecuted = false;
 
     public DrivingTask(final String taskName, final String where, final String using) {
         this.taskName = taskName;
@@ -14,7 +15,8 @@ public final class DrivingTask implements Task {
     @Override
     public boolean executeTask() {
         System.out.println("Task: " + getTaskName() + " is in progress.");
-        return false;
+        this.taskExecuted = true;
+        return true;
     }
     @Override
     public String getTaskName() {
@@ -22,6 +24,6 @@ public final class DrivingTask implements Task {
     }
     @Override
     public boolean isTaskExecuted() {
-        return true;
+        return taskExecuted;
     }
 }
