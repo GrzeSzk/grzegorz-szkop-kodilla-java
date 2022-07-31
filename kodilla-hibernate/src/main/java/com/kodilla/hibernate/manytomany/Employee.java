@@ -5,10 +5,17 @@ import com.sun.istack.NotNull;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-@NamedQuery(
-        name = "Employee.findEmployeeByLastName",
-        query = "FROM Employee WHERE lastname > :LASTNAME"
-)
+@NamedQueries({
+        @NamedQuery(
+                name = "Employee.findEmployeeByLastName",
+                query = "FROM Employee WHERE lastname > :LASTNAME"
+        ),
+        @NamedQuery(
+                name = "Employee.findEmployeeByPartOfName",
+                query = "FROM Employee WHERE firstname LIKE :JOH"
+        ),
+})
+
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {
